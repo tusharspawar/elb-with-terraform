@@ -1,0 +1,40 @@
+vpc_id = "vpc_id"
+
+elb_name = "Test-elb"
+
+elb_subnets = ["subnet-123123"]
+
+elb_access_logs = {
+    bucket        = "string"
+    bucket_prefix = "string"
+    interval      = 5
+}
+
+elb_listener_ssl = {
+    instance_port      = 8080
+    instance_protocol  = "http"
+    lb_port            = 443
+    lb_protocol        = "https"
+    ssl_certificate_id = "arn:aws:acm:us-east-1:918912390182:certificate/123as-430f-496f-a8fe-123asf245asdsdf"
+}
+
+elb_sg_name = "test-elb-sg"
+
+elb_sg_description = "test-elb-sg-description"
+
+elb_sg_ingress_rules = {
+    from_port         = 443
+    to_port           = 443
+    protocol          = "tcp"
+    cidr_blocks       = ["0.0.0.0/0"]
+}
+
+elb_target_sg_name = "test-elb-target-sg"
+
+elb_target_sg_description = "test-elb-target-sg-description"
+
+elb_target_sg_ingress_rules = {
+    from_port         = 8080
+    to_port           = 8080
+    protocol          = "tcp"
+}
