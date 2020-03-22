@@ -11,12 +11,12 @@ variable "vpc_id" {
 }
 
 variable "elb_name" {
-    description = "ELB Name"
+    description = "The name of the ELB"
     type = string
 }
 
 variable "elb_subnets" {
-    description = "List of subnet IDs to attach to the ELB"
+    description = "A list of subnet IDs to attach to the ELB"
     type = list(string)
 }
 
@@ -70,7 +70,7 @@ variable "elb_sg_description" {
 }
 
 variable "elb_sg_ingress_rules" {
-    description = "ELB targets security group name"
+    description = "ELB security group ingress rules"
     type = object({
         from_port         = number
         to_port           = number
@@ -90,7 +90,7 @@ variable "elb_target_sg_description" {
 }
 
 variable "elb_target_sg_ingress_rules" {
-    description = "ELB targets security group name"
+    description = "ELB targets security group ingress rules"
     type = object({
         from_port         = number
         to_port           = number
