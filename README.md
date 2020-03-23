@@ -1,6 +1,6 @@
 # AWS ELB Terraform 
 
-Terraform module which creates ELB resources along with Security Groups for secure HTTPS access on AWS.
+Terraform module, which creates ELB resources along with Security Groups for secure HTTPS access on AWS.
 
 These types of resources are supported:
 
@@ -9,9 +9,9 @@ These types of resources are supported:
 
 #### The following resources will be configured:
 
-*  **ELB security group** wuth unrestricted access allowed to port 443 (HTTPS) and all engress port protocol and ports allowned.
-*  **Application security group** with access from the ELB security group on port 8080 along with all engress port protocol and ports allowned.
-*  **ELB** with access logs shipping enabled with 5 minutes interval, Health check configured to `/health` every 10s with 3s Healthy/Unhealthy threshold and 2s timeout. Also request listener configured with SSL certificate
+*  **ELB security group** with unrestricted access allowed to port 443 (HTTPS) and all egress port protocol and ports allowed.
+*  **Application security group** with access from the ELB security group on port 8080 along with all egress port protocol and ports allowed.
+*  **ELB** with access logs shipping enabled with 5 minutes interval, Health check configured to `/health` every 10s with 3s Healthy/Unhealthy threshold and 2s timeout. Also, request listener configured with SSL certificate
 
 ## Note
 
